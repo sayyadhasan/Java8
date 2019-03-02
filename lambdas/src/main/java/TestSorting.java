@@ -38,9 +38,7 @@ public class TestSorting {
             System.out.println(developer);
         }
 
-        developerList.sort((Developer o1, Developer o2) -> {
-            return o1.getSalary().compareTo(o2.getSalary());
-        });
+        developerList.sort((Developer o1, Developer o2) -> o1.getAge() - o2.getAge());
 
         System.out.println("After sort on Salary");
         for (Developer developer : developerList) {
